@@ -14,11 +14,11 @@ with col2:
 with col3:
     st.write(' ')
 
-generations = ['Gen2']
+generations = ['Gen1','Gen2']
 poke_gen = st.radio('Choose a generation of Pokémon:', generations)
 @st.cache_data
 def load_players():
-    return list(pd.read_csv('https://github.com/Blandalytics/basemon/blob/main/data/baseball_pokemon_Gen2.csv?raw=true', encoding='latin1').sort_values('full_name')['full_name'].unique())
+    return list(pd.read_csv('https://github.com/Blandalytics/basemon/blob/main/data/baseball_pokemon_Gen1.csv?raw=true', encoding='latin1').sort_values('full_name')['full_name'].unique())
 players = load_players()
 
 # Player
@@ -29,4 +29,4 @@ card_loc = f"https://github.com/Blandalytics/basemon/blob/main/basemon_cards/{po
 basemon_card = Image.open(urllib.request.urlopen(card_loc))
 st.image(basemon_card)
 
-st.write("Make sure to subscribe to [PitcherList Pro](https://www.pitcherlist.com/premium/) for more content like this!")
+st.write("Make sure to subscribe to [PitcherList Pro](https://www.pitcherlist.com/premium/) for articles, analysis, and more content like this!")
