@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import urllib
 from PIL import Image
-header = Image.open(urllib.request.urlopen('https://github.com/Blandalytics/hockeymon/blob/main/hockeymon%20logo.png?raw=true'))
+header = Image.open(urllib.request.urlopen('https://github.com/Blandalytics/basemon/blob/main/basemon%20logo.png?raw=true'))
 col1, col2, col3 = st.columns([0.1,0.8,0.1])
 with col1:
     st.write(' ')
